@@ -8,7 +8,7 @@ class Libro;
 
 class Usuario {
 public:
-    void consultarDisponibilidad(const Libro& libro)
+    void consultarDisponibilidad(const Libro& libro);
 
     friend class Biblioteca;
 };

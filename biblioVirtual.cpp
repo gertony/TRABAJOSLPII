@@ -34,7 +34,7 @@ class MaterialBiblio{
 
 };
 
-class Libro : public MaterialBiblio{
+class Libro : protected MaterialBiblio{
     private:
         string genero;
         int isbn;
@@ -58,7 +58,7 @@ class Libro : public MaterialBiblio{
         }
 };
 
-class Revista : public MaterialBiblio{
+class Revista : protected MaterialBiblio{
     private:
         int nEdicion;
     public:
@@ -79,7 +79,7 @@ class Revista : public MaterialBiblio{
         }
 };
 
-class Tesis : public MaterialBiblio{
+class Tesis : protected MaterialBiblio{
     private:
         string universidad;
         string asesor;
@@ -103,7 +103,7 @@ class Tesis : public MaterialBiblio{
         }
 };
 
-class Comic : public MaterialBiblio{
+class Comic : protected MaterialBiblio{
     private:
         string dibujante;
     public:
@@ -132,6 +132,7 @@ int main(){
     Revista r1("Revista 1", "Autor 2", "Editorial 2", 000021, 1);
     Tesis t1("Tesis 1", "Autor 3", "Editorial 3", 011021, "UCSM", "ING MONTESINOS");
     Comic c1("Comic 1", "Autor 4", "Editorial 4", 0022321, "Dibujante 1");
+
     l1.mostrarInfo();
     r1.mostrarInfo();
     t1.mostrarInfo();
